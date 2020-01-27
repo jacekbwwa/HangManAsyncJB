@@ -2,7 +2,7 @@
 Hangman game built in Java with async callback and picture printout in console.
 
 
-# About
+# Description
 The game is a words guessing game for one player. 
 The word to guess is represented by a row of dashes, representing each letter of the word.
 The player chooses dictionary, then the computer guesses a word
@@ -137,9 +137,21 @@ You now have two options:
 
 
 
-## Java methods
+## Technologies Used
 
 Java OOP, Async callback
+
+## Code Explaination
+The code includes several shared Java objects which cover different tasks in the game:
+- Display.java. The main role is to display all messages, status, lives, etc..
+- Guesses.java. It is the part of guessing letter.
+- KeyBoard.java. It gets the input letter from the keyboard.
+- WordToGuess.java. It takes the task to to draw random word from the array words, .
+- Status.java. The main role is to count the available lives.
+- OnBEventListener.java. It is the  interface with a onBevent method passing drawn word and used letters as parameters.
+- B.java. The  role of the object is to invoke drawing the random word, then playing game method, and then listen when the play is over. When the game is over it invokes the onBevent method in A object.
+- A,java. It covers onBevent methods which display status of the game when the game is over.
+- HangManAsync.java. The main class with which starts the game: invokes the methods in B object (registerOnBEventListener and starts a new thread with playing game method).
 
 
 ### Author
@@ -148,3 +160,7 @@ Java OOP, Async callback
 *Software Developer  
 jacek.jaroslaw.byzdra@gmail.com  
 [Linkedin](https://www.linkedin.com/in/jacek-byzdra/) - [GitHub](https://github.com/jacekbwwa)*
+
+### License
+This work is available under a Creative Commons License Attribution - Non-Commercial Use - No Derivative Works 4.0 International
+[![License: CC BY-NC-ND 4.0](https://licensebuttons.net/l/by-nc-nd/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
