@@ -12,7 +12,7 @@ Every time the word doesn't contain a letter,
 the computer gives a penalty point, that's remove one life.
 If there is 0 lives, the user looses.
 The user won when he guesses all letters.
-The picture of gallows is displayed when user miss the letter.
+The picture of the gallows is displayed when the user miss the letter.
 
 &nbsp;# # # # # # # #   
 &nbsp;#&nbsp;   &nbsp;  &nbsp;   &nbsp;   &nbsp;  &nbsp;  &nbsp;&nbsp;|   
@@ -146,10 +146,10 @@ The code includes several shared Java objects which cover different tasks in the
 - Display.java. The main role is to display all messages, status, lives, etc..
 - Guesses.java. It is the part of guessing letter.
 - KeyBoard.java. It gets the input letter from the keyboard.
-- WordToGuess.java. It takes the task to to draw random word from the array words, .
+- WordToGuess.java. It takes the task to to draw random word from the array words,.
 - Status.java. The main role is to count the available lives.
 - OnBEventListener.java. It is the  interface with a onBevent method passing drawn word and used letters as parameters.
-- B.java. The  role of the object is to invoke drawing the random word, then playing game method, and then listen when the play is over. When the game is over it invokes the onBevent method in A object.
+- B.java. The  role of the object is to invoke drawing the random word, then playing game methods, and then listen when the play is over. When the game is over it invokes the onBevent method in A object.
 - A,java. It covers onBevent methods which display status of the game when the game is over.
 - HangManAsync.java. The main class with which starts the game: invokes the methods in B object (registerOnBEventListener and starts a new thread with playing game method).
 
